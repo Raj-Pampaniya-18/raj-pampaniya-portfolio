@@ -1,0 +1,36 @@
+# 🌐 Raj Pampaniya – Portfolio Website
+
+🚀 Personal portfolio website showcasing my skills, projects, and journey in **AI, Machine Learning, and Data Science**.
+
+🔗 **Live Website:**  
+👉 https://raj-pampaniya-18.github.io/raj-pampaniya-portfolio/
+
+---
+
+## 🧠 About Me
+I am an aspiring **AI/ML Engineer & Data Science enthusiast** with hands-on experience in building machine learning models and real-world projects.
+
+---
+
+## 🛠️ Tech Stack
+- HTML, CSS, JavaScript
+- CSS Animations & Responsive Design
+- Git & GitHub
+- GitHub Pages (Deployment)
+
+---
+
+## 📂 Projects
+- 🚗 Car Price Predictor  
+- 💬 WhatsApp Chat Analyzer  
+- 📚 Book Recommender System  
+- 🦠 COVID-19 Data Analysis  
+
+---
+
+## 📬 Contact
+- **Name:** Raj Pampaniya  
+- **Email:** rajpampaniya18@gmail.com  
+- **GitHub:** https://github.com/Raj-Pampaniya-18  
+
+⭐ If you like this portfolio, don’t forget to star the repo!
