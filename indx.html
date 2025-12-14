@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Pampaniya | AI & ML Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        card: 'rgba(255, 255, 255, 0.03)',
+                        primary: '#8b5cf6', // Violet
+                        secondary: '#06b6d4', // Cyan
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <canvas id="neural-canvas"></canvas>
+
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                RP<span class="text-white">.</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-primary transition-colors nav-link">About</a>
+                <a href="#skills" class="hover:text-primary transition-colors nav-link">Skills</a>
+                <a href="#projects" class="hover:text-primary transition-colors nav-link">Projects</a>
+                <a href="#experience" class="hover:text-primary transition-colors nav-link">Experience</a>
+                <a href="#contact" class="hover:text-primary transition-colors nav-link">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:block px-6 py-2 rounded-full border border-primary/30 hover:bg-primary/20 transition-all duration-300 text-sm glow-btn">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center relative pt-20" id="home">
+        <div class="container mx-auto px-6 text-center z-10">
+            <div class="inline-block px-4 py-1 mb-6 rounded-full border border-gray-700 bg-gray-900/50 backdrop-blur-sm hero-badge">
+                <span class="text-secondary text-xs uppercase tracking-widest">Available for Internship</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tight hero-title">
+                Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-secondary animate-gradient">Raj Pampaniya</span>
+            </h1>
+            <div class="h-10 mb-8 overflow-hidden text-xl md:text-2xl text-gray-400">
+                <span class="typewriter"></span>
+            </div>
+            <p class="max-w-2xl mx-auto text-gray-400 mb-10 text-lg hero-text">
+                Enthusiastic learner in Machine Learning ensuring optimal system performance and solving problems using data.
+            </p>
+            <div class="flex justify-center gap-6 hero-btns">
+                <a href="#projects" class="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-purple-600 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all duration-300 transform hover:-translate-y-1 font-medium">
+                    View Projects
+                </a>
+                <a href="#" class="px-8 py-3 rounded-full border border-gray-700 hover:border-white hover:bg-white hover:text-dark transition-all duration-300 font-medium group">
+                    Download Resume <i class="fa-solid fa-download ml-2 group-hover:animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-dark/50 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 reveal-left">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative bg-gray-900 rounded-2xl p-8 border border-gray-800">
+                            <h3 class="text-2xl font-bold mb-4 text-white">Profile Summary</h3>
+                            <p class="text-gray-400 leading-relaxed mb-4">
+                                I am an enthusiastic learner in Machine Learning with strong basics in Python, data analysis, and ML algorithms. Passionate about solving problems using data and eager to grow through an AI/ML internship opportunity.
+                            </p>
+                            <div class="flex gap-4 mt-6">
+                                <div class="text-center">
+                                    <h4 class="text-3xl font-bold text-secondary">5+</h4>
+                                    <p class="text-xs text-gray-500 uppercase mt-1">Projects</p>
+                                </div>
+                                <div class="w-px bg-gray-800"></div>
+                                <div class="text-center">
+                                    <h4 class="text-3xl font-bold text-primary">1+</h4>
+                                    <p class="text-xs text-gray-500 uppercase mt-1">Years Exp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 reveal-right">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Bridging the gap between <span class="text-primary">Data</span> and <span class="text-secondary">Decisions</span>.</h2>
+                    <p class="text-gray-400 mb-6">
+                        Currently pursuing my MCA at Surendranagar University. I specialize in building predictive models and analyzing unstructured data to derive actionable insights.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-secondary mr-3"></i> Data Preprocessing & EDA</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-secondary mr-3"></i> Supervised & Unsupervised Learning</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-secondary mr-3"></i> Large Language Models (LLMs)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 relative overflow-hidden">
+        <div class="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] -z-10"></div>
+        
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal-up">
+                Technical <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Proficiency</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="skill-card group p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/50 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Programming & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-primary/30 transition-colors">Python</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-primary/30 transition-colors">VS Code</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-primary/30 transition-colors">Jupyter Notebook</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-primary/30 transition-colors">Git & GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-card group p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-secondary/50 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center mb-6 text-secondary group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-chart-simple text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Data Analysis</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-secondary/30 transition-colors">NumPy</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-secondary/30 transition-colors">Pandas</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-secondary/30 transition-colors">Matplotlib</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-secondary/30 transition-colors">Seaborn</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-secondary/30 transition-colors">EDA</span>
+                    </div>
+                </div>
+
+                <div class="skill-card group p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/50 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-purple-500/30 transition-colors">Supervised Learning</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-purple-500/30 transition-colors">Regression</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-purple-500/30 transition-colors">K-Means</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-purple-500/30 transition-colors">Model Training</span>
+                    </div>
+                </div>
+
+                <div class="skill-card group p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-pink-500/50 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center mb-6 text-pink-400 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-network-wired text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Deep Learning <span class="text-xs opacity-50 ml-1 font-normal">(Basics)</span></h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-pink-500/30 transition-colors">Neural Networks</span>
+                        <span class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/5 text-gray-300 border border-white/5 group-hover:border-pink-500/30 transition-colors">TensorFlow</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-dark/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal-up">Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Projects</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="project-card relative group rounded-2xl overflow-hidden cursor-pointer h-80 border border-white/5 hover:border-primary/50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 opacity-90"></div>
+                    <div class="w-full h-full bg-gray-800 group-hover:scale-105 transition-transform duration-700 relative">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="LLM Teacher" class="w-full h-full object-cover opacity-40">
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3">
+                            <span class="px-3 py-1 text-xs rounded-full bg-primary/20 text-primary border border-primary/20">Generative AI</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-gray-700 text-gray-300 border border-gray-600">NLP</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">LLM-Powered AI Teacher</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            Personalized explanations and doubt resolution using Large Language Models and prompt engineering.
+                        </p>
+                        <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            <a href="#" class="text-white hover:text-secondary"><i class="fa-brands fa-github text-xl"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card relative group rounded-2xl overflow-hidden cursor-pointer h-80 border border-white/5 hover:border-secondary/50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 opacity-90"></div>
+                    <div class="w-full h-full bg-gray-800 group-hover:scale-105 transition-transform duration-700 relative">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800" alt="Car Price" class="w-full h-full object-cover opacity-40">
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3">
+                            <span class="px-3 py-1 text-xs rounded-full bg-secondary/20 text-secondary border border-secondary/20">Regression</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-gray-700 text-gray-300 border border-gray-600">Flask</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Car Price Predictor</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            Real-time car price prediction using regression algorithms, feature engineering, and Flask deployment.
+                        </p>
+                        <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            <a href="#" class="text-white hover:text-secondary"><i class="fa-brands fa-github text-xl"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="project-card relative group rounded-2xl overflow-hidden cursor-pointer h-80 border border-white/5 hover:border-green-500/50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 opacity-90"></div>
+                    <div class="w-full h-full bg-gray-800 group-hover:scale-105 transition-transform duration-700 relative">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" alt="Whatsapp Analysis" class="w-full h-full object-cover opacity-40">
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3">
+                            <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400 border border-green-500/20">Data Viz</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-gray-700 text-gray-300 border border-gray-600">NLP</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">WhatsApp Chat Analysis</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            Analyzing user behavior, sentiment, and emoji usage from unstructured chat data using Python.
+                        </p>
+                        <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            <a href="#" class="text-white hover:text-secondary"><i class="fa-brands fa-github text-xl"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card relative group rounded-2xl overflow-hidden cursor-pointer h-80 border border-white/5 hover:border-purple-500/50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 opacity-90"></div>
+                    <div class="w-full h-full bg-gray-800 group-hover:scale-105 transition-transform duration-700 relative">
+                         <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=800" alt="Book Recommender" class="w-full h-full object-cover opacity-40">
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3">
+                            <span class="px-3 py-1 text-xs rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/20">Clustering</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-gray-700 text-gray-300 border border-gray-600">Pandas</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Book Recommender System</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            Implemented clustering techniques to suggest books based on user preferences.
+                        </p>
+                        <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            <a href="#" class="text-white hover:text-secondary"><i class="fa-brands fa-github text-xl"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal-up">Journey <span class="text-gray-500">&</span> Education</h2>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-gradient-to-b from-primary via-secondary to-transparent"></div>
+
+                <div class="relative mb-12 md:w-1/2 md:pr-12 md:text-right reveal-left">
+                    <div class="absolute left-0 md:left-auto md:right-[-9px] w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(139,92,246,0.8)] mt-1.5 -ml-2 md:ml-0"></div>
+                    <div class="pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-white">Desktop Support Engineer</h3>
+                        <p class="text-primary font-medium mb-1">Renew Power (Inspace)</p>
+                        <p class="text-sm text-gray-500 mb-2">June 2024 - June 2025</p>
+                        <p class="text-gray-400 text-sm">
+                            Provided comprehensive desktop support, streamlined workflows enhancing efficiency by 25%, and minimized downtime.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 md:w-1/2 md:ml-auto md:pl-12 reveal-right">
+                    <div class="absolute left-0 w-4 h-4 rounded-full bg-secondary shadow-[0_0_10px_rgba(6,182,212,0.8)] mt-1.5 -ml-2"></div>
+                    <div class="pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-white">Master of Computer Applications (MCA)</h3>
+                        <p class="text-secondary font-medium mb-1">Surendranagar University</p>
+                        <p class="text-sm text-gray-500 mb-2">Present (Sem-3)</p>
+                        <p class="text-gray-400 text-sm">Focusing on Advanced Data Structures, AI, and Machine Learning.</p>
+                    </div>
+                </div>
+
+                <div class="relative md:w-1/2 md:pr-12 md:text-right reveal-left">
+                    <div class="absolute left-0 md:left-auto md:right-[-9px] w-4 h-4 rounded-full bg-gray-600 mt-1.5 -ml-2 md:ml-0"></div>
+                    <div class="pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-white">Bachelor of Computer Applications (BCA)</h3>
+                        <p class="text-gray-300 font-medium mb-1">Dr. Subhash Technical Campus</p>
+                        <p class="text-gray-400 text-sm">Graduated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative bg-dark/80 backdrop-blur-lg border-t border-gray-800">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Ready to <span class="text-primary">Collaborate?</span></h2>
+            <p class="text-gray-400 mb-10 text-lg">
+                I am currently looking for an internship in AI/ML. If you have an opportunity or just want to discuss a project, feel free to reach out.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:rajpampaniya18@gmail.com" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-card border border-gray-700 hover:border-primary hover:bg-primary/10 transition-all duration-300 group">
+                    <i class="fa-solid fa-envelope text-xl text-primary group-hover:scale-110 transition-transform"></i>
+                    <span class="text-gray-300">rajpampaniya18@gmail.com</span>
+                </a>
+                <a href="tel:+917990437337" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-card border border-gray-700 hover:border-secondary hover:bg-secondary/10 transition-all duration-300 group">
+                    <i class="fa-solid fa-phone text-xl text-secondary group-hover:scale-110 transition-transform"></i>
+                    <span class="text-gray-300">+91 7990437337</span>
+                </a>
+            </div>
+
+            <div class="flex justify-center gap-6">
+                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-white hover:text-dark hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-blue-500 hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-twitter text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-gray-600 text-sm border-t border-gray-900 bg-black">
+        <p>&copy; 2025 Raj Pampaniya. Built with <i class="fa-solid fa-heart text-red-500 mx-1"></i> & AI.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

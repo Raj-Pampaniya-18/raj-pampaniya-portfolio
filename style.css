@@ -1,0 +1,115 @@
+/* Base Resets */
+:root {
+    --cursor-size: 20px;
+}
+
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+/* Custom Cursor */
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+.cursor-outline {
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    mix-blend-mode: difference;
+}
+
+body:hover .cursor-outline {
+    width: 40px;
+    height: 40px;
+}
+
+/* Canvas Background */
+#neural-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Glassmorphism */
+.glass-nav {
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient Text Animation */
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    background-size: 200% auto;
+    animation: gradient-move 4s linear infinite;
+}
+
+/* Card Glow Effects */
+.glow-btn:hover {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8b5cf6;
+}
+
+/* Specific Transitions for Cards to avoid GSAP conflict */
+.skill-card, .project-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover {
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    body {
+        cursor: auto;
+    }
+    .cursor-dot, .cursor-outline {
+        display: none;
+    }
+}
