@@ -28,9 +28,12 @@ I am an aspiring **AI/ML Engineer & Data Science enthusiast** with hands-on expe
 
 ---
 
-## 📬 Contact
-- **Name:** Raj Pampaniya  
-- **Email:** rajpampaniya18@gmail.com  
-- **GitHub:** https://github.com/Raj-Pampaniya-18  
 
-⭐ If you like this portfolio, don’t forget to star the repo!
+## 👨‍💻 Author
+
+**Raj Pampaniya**
+🔗 GitHub: [https://github.com/Raj-Pampaniya-18](https://github.com/Raj-Pampaniya-18)
+
+---
+
+⭐ If you like this project, don’t forget to **star the repository**!
