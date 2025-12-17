@@ -3,7 +3,7 @@
 🚀 Personal portfolio website showcasing my skills, projects, and journey in **AI, Machine Learning, and Data Science**.
 
 🔗 **Live Website:**  
-👉 https://raj-pampaniya-18.github.io/raj-pampaniya-portfolio/
+👉 raj-pampaniya-portfolio.vercel.app
 
 ---
 
